@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ครูแนน มนัสวี เหลาเกตุ - แฟ้มสะสมผลงานออนไลน์ (Social Studies Portfolio)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Kanit & Sarabun) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Sarabun', 'sans-serif'],
+                        title: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            deep: '#2D3A3A',      // Dark Sage Slate (สีสำหรับส่วนอักษรและจุดเน้นเข้ม)
+                            navy: '#5F8D8A',      // Soft Sage Green (สีเขียวเซจ อบอุ่น สบายตา)
+                            gold: '#D4A373',      // Warm Sand Gold (สีทองทราย เชื่อมโยงกับชุดและหัวเข็มขัด)
+                            goldlight: '#FEFAE0', // Warm Ivory / Cream (สีครีมงาช้างเป็นมิตรกับสายตา)
+                            accent: '#E76F51',    // Terracotta (สีส้มอิฐ เพิ่มชีวิตชีวาและความคิดสร้างสรรค์)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .motto-bg {
+            background-image: radial-gradient(circle at center, rgba(95, 141, 138, 0.08) 0%, transparent 70%);
+        }
+        .hero-pattern {
+            background-color: #FDFBF7; /* Soft Pearl Cream background */
+            background-image: radial-gradient(rgba(95, 141, 138, 0.1) 1.5px, transparent 1.5px), radial-gradient(rgba(231, 111, 81, 0.06) 1.5px, transparent 1.5px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+        }
+    </style>
+</head>
+<body class="bg-[#FCFAF2] text-slate-800 font-sans antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full bg-[#FCFAF2]/90 backdrop-blur-md text-slate-800 z-50 border-b border-brand-navy/10 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand Name -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center font-title font-bold text-white text-lg shadow-md border border-white/40">
+                        MNW
+                    </div>
+                    <div>
+                        <span class="block font-title font-bold text-lg tracking-wide text-brand-deep">Kru Nan Portfolio</span>
+                        <span class="block text-xs text-brand-navy font-medium">แฟ้มสะสมผลงานครูมนัสวี เหลาเกตุ</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-4">
+                    <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:text-brand-accent transition duration-150 text-slate-700">หน้าแรก</a>
+                    <a href="#motto" class="px-3 py-2 rounded-md text-sm font-medium hover:text-brand-accent transition duration-150 text-slate-700">คติประจำใจ</a>
+                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:text-brand-accent transition duration-150 text-slate-700">ประวัติครูผู้สอน</a>
+                    <a href="#education" class="px-3 py-2 rounded-md text-sm font-medium hover:text-brand-accent transition duration-150 text-slate-700">การศึกษา</a>
+                    <a href="#portfolio" class="px-3 py-2 rounded-md text-sm font-medium hover:text-brand-accent transition duration-150 text-slate-700">ผลงานและสื่อ</a>
+                    <a href="#gallery" class="px-3 py-2 rounded-md text-sm font-medium hover:text-brand-accent transition duration-150 text-slate-700">ภาพกิจกรรม</a>
+                    <a href="#contact" class="ml-4 px-5 py-2.5 bg-brand-navy hover:bg-brand-deep text-white font-title font-semibold rounded-full text-sm transition-all duration-150 shadow-md hover:shadow-lg">ติดต่อ</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-brand-navy hover:bg-slate-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">เปิดเมนูหลัก</span>
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div class="hidden md:hidden bg-[#FCFAF2] border-b border-brand-navy/10 transition-all" id="mobile-menu">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-goldlight hover:text-brand-navy">หน้าแรก</a>
+                <a href="#motto" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-goldlight hover:text-brand-navy">คติประจำใจ</a>
+                <a href="#about" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-goldlight hover:text-brand-navy">ประวัติครูผู้สอน</a>
+                <a href="#education" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-goldlight hover:text-brand-navy">การศึกษา</a>
+                <a href="#portfolio" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-goldlight hover:text-brand-navy">ผลงานและสื่อ</a>
+                <a href="#gallery" class="block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-goldlight hover:text-brand-navy">ภาพกิจกรรม</a>
+                <a href="#contact" class="block px-3 py-2.5 rounded-md text-base font-semibold text-white bg-brand-navy hover:bg-brand-deep text-center mt-4">ติดต่อครูแนน</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-pattern min-h-screen flex items-center pt-24 pb-16 relative overflow-hidden">
+        <!-- Accent Glows -->
+        <div class="absolute top-1/4 left-1/10 w-96 h-96 bg-brand-navy/15 rounded-full filter blur-[120px] pointer-events-none animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/10 w-96 h-96 bg-brand-gold/15 rounded-full filter blur-[120px] pointer-events-none animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Info -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-navy/15 text-brand-navy border border-brand-navy/30 tracking-wider font-title uppercase">
+                        <i class="fa-solid fa-graduation-cap mr-2"></i> แฟ้มสะสมผลงานครูสังคมศึกษา
+                    </span>
+                    <h1 class="font-title font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-tight">
+                        ครูแนน <span class="text-brand-accent block lg:inline">มนัสวี เหลาเกตุ</span>
+                    </h1>
+                    <p class="text-slate-600 text-lg sm:text-xl font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        มุ่งมั่นพัฒนาการจัดการเรียนรู้ด้านสังคมศึกษา บ่มเพาะเยาวชนให้มีความรู้คู่คุณธรรม เป็นพลเมืองที่มีคุณภาพของสังคม ณ <span class="text-brand-navy font-semibold">โรงเรียนแก่นนครวิทยาลัย (KNW)</span> จังหวัดขอนแก่น
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#portfolio" class="px-8 py-4 bg-brand-navy hover:bg-brand-deep text-white font-title font-bold rounded-lg transition duration-200 shadow-lg hover:shadow-brand-navy/20 transform hover:-translate-y-1 text-center">
+                            <i class="fa-solid fa-book-open mr-2"></i> ชมผลงาน & สื่อการสอน
+                        </a>
+                        <a href="#contact" class="px-8 py-4 bg-white hover:bg-slate-50 text-slate-800 font-title font-bold rounded-lg border border-slate-200 transition duration-200 text-center shadow-sm">
+                            ช่องทางการติดต่อ
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats Badge -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-brand-navy/20 max-w-md mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl lg:text-3xl font-bold text-brand-accent font-title">EDU</span>
+                            <span class="block text-xs text-slate-500">สังคมศึกษาฯ</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl lg:text-3xl font-bold text-brand-navy font-title">ACTIVE</span>
+                            <span class="block text-xs text-slate-500">Active Learning</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl lg:text-3xl font-bold text-brand-gold font-title">KK</span>
+                            <span class="block text-xs text-slate-500">ขอนแก่น</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Container -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                        <!-- Background Decorative Shapes -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-navy to-brand-gold rounded-full transform rotate-6 scale-105 opacity-20 animate-pulse"></div>
+                        <div class="absolute inset-0 border-2 border-dashed border-brand-navy/40 rounded-full transform -rotate-6 scale-102"></div>
+                        
+                        <!-- Main Profile Avatar Frame with Kru Nan Photo -->
+                        <div class="absolute inset-4 rounded-full overflow-hidden border-4 border-white bg-slate-100 flex items-center justify-center shadow-xl">
+                            <!-- ครูแนน Profile Image -->
+                            <img src="_MG_4768.jpg" alt="ครูแนน มนัสวี เหลาเกตุ" class="w-full h-full object-cover object-top scale-105 transition-transform duration-300 hover:scale-110" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <!-- SVG Fallback placeholder in case image fails to load -->
+                            <svg class="w-full h-full text-slate-400 bg-gradient-to-b from-brand-goldlight to-teal-50 hidden" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <!-- Elegant overlay badge -->
+                            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/95 text-brand-deep text-xs px-4 py-1.5 rounded-full border border-brand-navy/20 shadow-md backdrop-blur font-title font-medium whitespace-nowrap">
+                                ครูมนัสวี เหลาเกตุ (ครูแนน)
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 1 -->
+                        <div class="absolute top-8 left-0 bg-brand-accent text-white font-bold p-3 rounded-xl shadow-lg transform -translate-x-4 hover:scale-105 transition-all duration-200">
+                            <i class="fa-solid fa-star text-lg"></i>
+                        </div>
+                        <!-- Floating Badge 2 -->
+                        <div class="absolute bottom-12 right-0 bg-brand-navy text-white font-bold p-3 rounded-xl shadow-lg transform translate-x-4 hover:scale-105 transition-all duration-200">
+                            <i class="fa-solid fa-heart text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Wave divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg class="relative block w-full h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120 w" preserveAspectRatio="none">
+                <path d="M1200 120L0 120 0 0C100 40 200 60 350 40C500 20 700 80 900 60C1050 45 1150 15 1200 0L1200 120Z" fill="#FCFAF2"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- MOTTO SECTION -->
+    <section id="motto" class="py-20 bg-[#FCFAF2] motto-bg relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <div class="mb-4 flex justify-center">
+                <span class="text-6xl text-brand-gold opacity-50 font-serif">“</span>
+            </div>
+
+            <div class="space-y-6">
+                <p class="font-title text-xl sm:text-2xl md:text-3xl text-slate-800 font-medium leading-relaxed italic px-4">
+                    นิ้วทั้ง 5 ไม่เท่ากันฉันใด ความสามารถของแต่ละคนมีไม่เท่ากันฉันนั้น ธรรมชาติต้องการสอนให้เราอยู่ร่วมกันอย่างถ้อยทีถ้อยอาศัย บางสิ่งที่เขาขาดเราอาจมี บางสิ่งที่เขาดีเราอาจด้อย เราเกิดมาเพื่อเติมเต็มกันและกัน
+                </p>
+                
+                <div class="flex items-center justify-center space-x-3 pt-4">
+                    <div class="h-[1px] w-12 bg-brand-navy/30"></div>
+                    <span class="font-title text-base sm:text-lg text-brand-accent font-semibold tracking-wider">ท่าน ว.วชิรเมธี</span>
+                    <div class="h-[1px] w-12 bg-brand-navy/30"></div>
+                </div>
+            </div>
+
+            <div class="mt-4 flex justify-center">
+                <span class="text-6xl text-brand-gold opacity-50 font-serif leading-none">”</span>
+            </div>
+            
+            <!-- Pedagogical Reflection Card -->
+            <div class="mt-12 bg-white rounded-2xl p-6 sm:p-8 shadow-lg shadow-brand-navy/5 border border-brand-navy/10 max-w-2xl mx-auto">
+                <h4 class="font-title font-bold text-lg text-brand-navy mb-3">
+                    <i class="fa-solid fa-lightbulb text-brand-gold mr-2"></i> ปรัชญาการศึกษาของครูแนน
+                </h4>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    เพราะนักเรียนแต่ละคนมีความแตกต่างระหว่างบุคคล หน้าที่ของครูสังคมศึกษาจึงไม่ใช่แค่การมอบเนื้อหาตำรา แต่เป็นการโอบอุ้ม สนับสนุน และออกแบบห้องเรียนที่เปิดโอกาสให้เยาวชนดึงศักยภาพสูงสุดของตนเองออกมา เพื่อขับเคลื่อนและร่วมมือช่วยเหลือเกื้อกูลกันในสังคมอย่างสันติสุข
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME / BIO -->
+    <section id="about" class="py-20 bg-white border-y border-brand-navy/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details Graphic -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="relative bg-gradient-to-br from-brand-deep to-slate-800 rounded-3xl p-8 text-white shadow-xl overflow-hidden">
+                        <div class="absolute -right-16 -top-16 w-48 h-48 bg-brand-gold/15 rounded-full filter blur-xl"></div>
+                        <div class="absolute -left-16 -bottom-16 w-48 h-48 bg-brand-navy/25 rounded-full filter blur-xl"></div>
+                        
+                        <div class="relative z-10 space-y-6">
+                            <h3 class="font-title font-bold text-2xl text-brand-gold border-b border-white/10 pb-4">ข้อมูลครูผู้สอน</h3>
+                            
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="text-brand-gold mr-3"><i class="fa-solid fa-user-tie mt-1"></i></span>
+                                    <div>
+                                        <span class="block text-xs text-slate-400">ชื่อ-นามสกุล</span>
+                                        <span class="text-base font-semibold text-white">นางสาวมนัสวี เหลาเกตุ (ครูแนน)</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-brand-gold mr-3"><i class="fa-solid fa-school mt-1"></i></span>
+                                    <div>
+                                        <span class="block text-xs text-slate-400">สังกัดองค์กร</span>
+                                        <span class="text-base font-semibold text-white">โรงเรียนแก่นนครวิทยาลัย (KNW) จังหวัดขอนแก่น</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-brand-gold mr-3"><i class="fa-solid fa-book mt-1"></i></span>
+                                    <div>
+                                        <span class="block text-xs text-slate-400">วิชาหลักที่สอน</span>
+                                        <span class="text-base font-semibold text-white">สังคมศึกษา ศาสนา และวัฒนธรรม</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-brand-gold mr-3"><i class="fa-solid fa-map-location-dot mt-1"></i></span>
+                                    <div>
+                                        <span class="block text-xs text-slate-400">พิกัดการทำงาน</span>
+                                        <span class="text-base font-semibold text-white">อ.เมือง จ.ขอนแก่น, ประเทศไทย</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Biography Details -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-brand-navy font-title font-semibold tracking-wide uppercase text-sm">สาระความถนัดเฉพาะทาง</span>
+                        <h2 class="font-title font-extrabold text-3xl sm:text-4xl text-slate-900">เชี่ยวชาญด้านการจัดกิจกรรมการเรียนรู้ประยุกต์</h2>
+                    </div>
+                    
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        จากการปฏิบัติหน้าที่จัดกิจกรรมการเรียนรู้ในระดับชั้นมัธยมศึกษา ครูแนนมุ่งเน้นกระบวนการจัดการเรียนรู้เชิงรุก (Active Learning) ที่ใช้เทคนิคสื่อทำมือ นวัตกรรมเกมมิฟิเคชั่น (Gamification) บอร์ดเกมการศึกษา และแอปพลิเคชันอำนวยความสะดวกในห้องเรียน เพื่อกระตุ้นให้นักเรียนเกิดทักษะการคิดเชิงวิพากษ์ (Critical Thinking) การวิเคราะห์พฤติกรรมทางสังคม และความตระหนักรู้ต่อพลเมืองโลก (Global Citizenship)
+                    </p>
+
+                    <!-- Expertise Tags Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center p-4 bg-brand-goldlight/40 rounded-xl border border-brand-gold/20">
+                            <div class="w-10 h-10 rounded-lg bg-brand-navy/10 text-brand-navy flex items-center justify-center mr-3 font-semibold">
+                                <i class="fa-solid fa-landmark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-title font-semibold text-sm text-slate-800">ประวัติศาสตร์ & ภูมิศาสตร์</h4>
+                                <p class="text-xs text-slate-500">การศึกษาภูมิสารสนเทศระดับโรงเรียน</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center p-4 bg-brand-goldlight/40 rounded-xl border border-brand-gold/20">
+                            <div class="w-10 h-10 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center mr-3 font-semibold">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-title font-semibold text-sm text-slate-800">หน้าที่พลเมือง & ศีลธรรม</h4>
+                                <p class="text-xs text-slate-500">บ่มเพาะสติปัญญาและจริยธรรม</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center p-4 bg-brand-goldlight/40 rounded-xl border border-brand-gold/20">
+                            <div class="w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center mr-3 font-semibold">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-title font-semibold text-sm text-slate-800">Active Learning Board Games</h4>
+                                <p class="text-xs text-slate-500">บอร์ดเกมสังคมศึกษาช่วยจำลึกซึ้ง</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center p-4 bg-brand-goldlight/40 rounded-xl border border-brand-gold/20">
+                            <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center mr-3 font-semibold">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-title font-semibold text-sm text-slate-800">พลเมืองดิจิทัลและโลกปัจจุบัน</h4>
+                                <p class="text-xs text-slate-500">ขับเคลื่อนทักษะดิจิทัลของเด็ก KNW</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-20 bg-brand-navy/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-navy font-title font-semibold tracking-wide uppercase text-sm">เส้นทางวิชาชีพ</span>
+                <h2 class="font-title font-extrabold text-3xl sm:text-4xl text-slate-900">ประวัติการศึกษาและการพัฒนาตนเอง</h2>
+                <p class="text-slate-500">รากฐานของการส่งต่อความรู้ที่มีคุณภาพและเป็นระบบแก่นักเรียน</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto relative">
+                <!-- Vertical Line of Timeline -->
+                <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-brand-navy/20 transform -translate-x-1/2"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12">
+                    <div class="hidden sm:block w-[45%] text-right pr-8">
+                        <span class="inline-block bg-brand-navy/10 text-brand-navy px-3 py-1 rounded-full text-xs font-title font-bold">พ.ศ. 2561 - ปัจจุบัน</span>
+                    </div>
+                    <!-- Node -->
+                    <div class="absolute left-4 sm:left-1/2 w-8 h-8 rounded-full bg-brand-navy border-4 border-white transform -translate-x-1/2 flex items-center justify-center text-white z-10 shadow-md">
+                        <i class="fa-solid fa-briefcase text-xs"></i>
+                    </div>
+                    <div class="w-full sm:w-[45%] pl-12 sm:pl-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-navy/10 relative">
+                            <span class="sm:hidden block bg-brand-navy/10 text-brand-navy px-3 py-1 rounded-full text-xs font-title font-bold w-max mb-2">พ.ศ. 2561 - ปัจจุบัน</span>
+                            <h3 class="font-title font-bold text-lg text-brand-deep">คุณครูผู้สอนกลุ่มสาระสังคมศึกษาฯ</h3>
+                            <p class="text-sm font-semibold text-slate-700">โรงเรียนแก่นนครวิทยาลัย (KNW)</p>
+                            <p class="text-xs text-slate-500 mt-2">จัดการสอนระดับชั้นมัธยมศึกษาตอนต้น-ตอนปลาย ดูแลจัดตั้งชมรมพัฒนาชุมชน ปฏิบัติหน้าที่งานพัฒนาหลักสูตร และกิจกรรมคุณธรรมจริยธรรมในสถานศึกษา</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12">
+                    <div class="w-full sm:w-[45%] pl-12 sm:pl-0 sm:pr-8 sm:text-right order-2 sm:order-1">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-navy/10">
+                            <span class="sm:hidden block bg-brand-gold/15 text-brand-gold px-3 py-1 rounded-full text-xs font-title font-bold w-max mb-2">พ.ศ. 2556 - 2560</span>
+                            <h3 class="font-title font-bold text-lg text-brand-accent">ครุศาสตรบัณฑิต (ค.บ. สังคมศึกษา)</h3>
+                            <p class="text-sm font-semibold text-slate-700">มหาวิทยาลัยราชภัฏชั้นนำ</p>
+                            <p class="text-xs text-slate-500 mt-2">ศึกษาเจาะลึกด้านการพัฒนาระบบการเรียนรู้ ศาสตร์การสอนสังคมวิทยา ประวัติศาสตร์ การพัฒนาแบบจำลองหลักสูตร และฝึกประสบการณ์วิชาชีพด้วยระดับคะแนนเกียรตินิยม</p>
+                        </div>
+                    </div>
+                    <!-- Node -->
+                    <div class="absolute left-4 sm:left-1/2 w-8 h-8 rounded-full bg-brand-gold border-4 border-white transform -translate-x-1/2 flex items-center justify-center text-white z-10 shadow-md">
+                        <i class="fa-solid fa-graduation-cap text-xs"></i>
+                    </div>
+                    <div class="hidden sm:block w-[45%] pl-8 order-1 sm:order-2">
+                        <span class="inline-block bg-brand-gold/15 text-brand-gold px-3 py-1 rounded-full text-xs font-title font-bold">พ.ศ. 2556 - 2560</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                    <div class="hidden sm:block w-[45%] text-right pr-8">
+                        <span class="inline-block bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-title font-bold">พ.ศ. 2550 - 2555</span>
+                    </div>
+                    <!-- Node -->
+                    <div class="absolute left-4 sm:left-1/2 w-8 h-8 rounded-full bg-slate-400 border-4 border-white transform -translate-x-1/2 flex items-center justify-center text-white z-10 shadow-md">
+                        <i class="fa-solid fa-school text-xs"></i>
+                    </div>
+                    <div class="w-full sm:w-[45%] pl-12 sm:pl-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-navy/10">
+                            <span class="sm:hidden block bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-title font-bold w-max mb-2">พ.ศ. 2550 - 2555</span>
+                            <h3 class="font-title font-bold text-lg text-slate-700">มัธยมศึกษาตอนต้น-ตอนปลาย</h3>
+                            <p class="text-sm font-semibold text-slate-700">โรงเรียนชื่อดังชั้นนำประจำจังหวัด</p>
+                            <p class="text-xs text-slate-500 mt-2">สำเร็จการศึกษาแผนการเรียนศิลป์-สังคม ด้วยผลการเรียนดีเยี่ยมและมีส่วนร่วมในฐานะแกนนำคณะกรรมการนักเรียนและประธานชมรมวัฒนธรรมถิ่นอีสาน</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                <div class="space-y-3">
+                    <span class="text-brand-accent font-title font-semibold tracking-wide uppercase text-sm">โชว์เคสความสำเร็จ</span>
+                    <h2 class="font-title font-extrabold text-3xl sm:text-4xl text-slate-900">ผลงานดีเด่นและสื่อการสอนนวัตกรรม</h2>
+                    <p class="text-slate-500 max-w-xl">ประมวลผลงาน เอกสารเชิงวิชาการ แผนการจัดการเรียนรู้ และสื่อสร้างสรรค์ในการพัฒนาการเรียนการสอน</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2" id="portfolio-filters">
+                    <button data-filter="all" class="filter-btn active px-4 py-2 text-xs font-title font-semibold rounded-full bg-brand-navy text-white transition-all">ทั้งหมด</button>
+                    <button data-filter="media" class="filter-btn px-4 py-2 text-xs font-title font-semibold rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">สื่อการสอนทำมือ</button>
+                    <button data-filter="academic" class="filter-btn px-4 py-2 text-xs font-title font-semibold rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">งานวิชาการ/วิจัย</button>
+                    <button data-filter="award" class="filter-btn px-4 py-2 text-xs font-title font-semibold rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">เกียรติบัตร/รางวัล</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-items">
+                
+                <!-- Portfolio Card 1 -->
+                <div class="portfolio-item bg-slate-50 rounded-2xl border border-brand-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="media">
+                    <div class="h-48 bg-gradient-to-tr from-brand-navy to-[#7E9F9C] flex items-center justify-center p-6 text-white text-center relative">
+                        <i class="fa-solid fa-gamepad text-5xl opacity-20 absolute right-4 bottom-4"></i>
+                        <h4 class="font-title font-bold text-lg relative z-10">บอร์ดเกม "ตะลุยเส้นทางเศรษฐศาสตร์พอเพียง"</h4>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <span class="inline-block bg-brand-navy/10 text-brand-navy px-3 py-1 rounded-full text-xs font-title font-semibold">สื่อการสอนทำมือ</span>
+                        <h3 class="font-title font-bold text-lg text-slate-900 leading-snug">บอร์ดเกมจำลองพฤติกรรมผู้บริโภค</h3>
+                        <p class="text-slate-500 text-sm">สื่อประยุกต์วิชาเศรษฐศาสตร์ระดับชั้น ม.3 สนุกเข้าใจง่าย ใช้เวลากิจกรรมกลุ่มสั้น 20 นาที นักเรียนสามารถจำลองและประเมินผลลัพธ์ผ่านเกณฑ์ประเมินได้อย่างยอดเยี่ยม</p>
+                        <div class="pt-4 border-t border-slate-200/60 flex justify-between items-center text-xs">
+                            <span class="text-slate-400">ชั้นมัธยมศึกษาปีที่ 3</span>
+                            <button class="text-brand-accent hover:text-brand-deep font-title font-bold flex items-center" onclick="showInteractiveModal('บอร์ดเกมตะลุยเส้นทางเศรษฐศาสตร์พอเพียง', 'สื่อการสอนบอร์ดเกมทำมือที่ช่วยให้นักเรียนเข้าใจกระบวนการวางแผนทางการเงิน การจัดแบ่งรายรับรายจ่าย และหลักปรัชญาของเศรษฐกิจพอเพียงอย่างเป็นรูปธรรม โดยมีการออกแบบกราฟิกการ์ดคำถาม แผ่นกระดาน และอุปกรณ์ประกอบที่นักเรียนสามารถมีส่วนร่วมพร้อมกันสูงสุด 6 คนต่อกลุ่ม ผลลัพธ์จากการใช้งานพบว่านักเรียนสามารถทำคะแนนทดสอบหลังเรียนเพิ่มขึ้นเฉลี่ยร้อยละ 25')">
+                                อ่านข้อมูลเพิ่มเติม <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 2 -->
+                <div class="portfolio-item bg-slate-50 rounded-2xl border border-brand-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="academic">
+                    <div class="h-48 bg-gradient-to-tr from-brand-gold to-brand-accent/80 flex items-center justify-center p-6 text-white text-center relative">
+                        <i class="fa-solid fa-file-invoice-dollar text-5xl opacity-20 absolute right-4 bottom-4"></i>
+                        <h4 class="font-title font-bold text-lg relative z-10">รายงานการวิจัยในชั้นเรียนเชิงปฏิบัติการ</h4>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <span class="inline-block bg-brand-gold/15 text-brand-gold px-3 py-1 rounded-full text-xs font-title font-semibold">งานวิชาการ/วิจัย</span>
+                        <h3 class="font-title font-bold text-lg text-slate-900 leading-snug">การแก้ปัญหาความคุ้นเคยด้วย Gamification</h3>
+                        <p class="text-slate-500 text-sm">ผลงานวิจัยการแก้ความเฉื่อยชาในห้องเรียนวิชาประวัติศาสตร์ไทย ด้วยระบบคะแนนและภารกิจเก็บแต้ม ส่งผลความกระตือรือร้นของนักเรียนเพิ่มขึ้นอย่างเด่นชัด</p>
+                        <div class="pt-4 border-t border-slate-200/60 flex justify-between items-center text-xs">
+                            <span class="text-slate-400">กลุ่มตัวอย่าง ม.ปลาย (KNW)</span>
+                            <button class="text-brand-accent hover:text-brand-deep font-title font-bold flex items-center" onclick="showInteractiveModal('การศึกษาผลการจัดการเรียนรู้ประวัติศาสตร์โดยใช้เกมมิฟิเคชัน', 'การวิจัยเชิงปฏิบัติการในชั้นเรียนเพื่อส่งเสริมทักษะความคิดริเริ่มสร้างสรรค์ และแก้ความเฉื่อยชาในการเรียนวิชาประวัติศาสตร์ ม.5 โดยการประยุกต์ใช้แพลตฟอร์มดิจิทัล เช่น Kahoot, Classcraft และบอร์ดเกมย้อนเวลา ผลงานวิจัยฉบับสมบูรณ์ได้จัดเผยแพร่ในงานนวัตกรรมกลุ่มสาระระดับเขตพื้นที่การศึกษา')">
+                                อ่านข้อมูลเพิ่มเติม <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 3 -->
+                <div class="portfolio-item bg-slate-50 rounded-2xl border border-brand-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="award">
+                    <div class="h-48 bg-gradient-to-tr from-brand-accent to-brand-gold flex items-center justify-center p-6 text-white text-center relative">
+                        <i class="fa-solid fa-award text-5xl opacity-20 absolute right-4 bottom-4"></i>
+                        <h4 class="font-title font-bold text-lg relative z-10">รางวัลครูผู้สอนดีเด่น ระดับเขตพื้นที่ฯ</h4>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <span class="inline-block bg-brand-accent/15 text-brand-accent px-3 py-1 rounded-full text-xs font-title font-semibold">เกียรติบัตร/รางวัล</span>
+                        <h3 class="font-title font-bold text-lg text-slate-900 leading-snug">รางวัลครูผู้จัดการเรียนรู้นวัตกรรมยอดเยี่ยม</h3>
+                        <p class="text-slate-500 text-sm">การเชิดชูเกียรติผู้สร้างสรรค์การออกแบบการเรียนการสอนสังคมศึกษา จากสำนักงานเขตพื้นที่การศึกษามัธยมศึกษา ขอนแก่น</p>
+                        <div class="pt-4 border-t border-slate-200/60 flex justify-between items-center text-xs">
+                            <span class="text-slate-400">รับมอบ พ.ศ. 2567</span>
+                            <button class="text-brand-accent hover:text-brand-deep font-title font-bold flex items-center" onclick="showInteractiveModal('รางวัลครูดีเด่น ด้านนวัตกรรมการเรียนการสอน', 'เกียรติบัตรรับรองความประพฤติและวิชาการดีเด่นในการสนับสนุนกระบวนการเรียนรู้แบบมีส่วนร่วม สรรสร้างสื่อนวัตกรรมเรียนรู้เชิงพื้นที่ของจังหวัดขอนแก่น ได้รับคัดเลือกเป็นตัวแทนแลกเปลี่ยนแนวทางปฏิบัติที่เป็นเลิศ (Best Practice) ในการจัดสัมมนาวิชาการกลุ่มครูสังคมศึกษา สพม. ขอนแก่น')">
+                                อ่านข้อมูลเพิ่มเติม <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 4 -->
+                <div class="portfolio-item bg-slate-50 rounded-2xl border border-brand-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="media">
+                    <div class="h-48 bg-gradient-to-tr from-[#6B8E8E] to-[#8FAAA6] flex items-center justify-center p-6 text-white text-center relative">
+                        <i class="fa-solid fa-map-location-dot text-5xl opacity-20 absolute right-4 bottom-4"></i>
+                        <h4 class="font-title font-bold text-lg relative z-10">ชุดการเรียนรู้ "แผนที่เมืองเก่าขอนแก่น"</h4>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <span class="inline-block bg-brand-navy/10 text-brand-navy px-3 py-1 rounded-full text-xs font-title font-semibold">สื่อการสอนทำมือ</span>
+                        <h3 class="font-title font-bold text-lg text-slate-900 leading-snug">ชุดข้อมูลแผนที่ประวัติศาสตร์ชุมชน</h3>
+                        <p class="text-slate-500 text-sm">โมเดลกระดาษ 3 มิติและพิกัดแผนที่สารสนเทศท้องถิ่นขอนแก่น ให้นักเรียนลงมือประดิษฐ์สัญลักษณ์เรียนรู้คุณค่าโบราณสถานใกล้โรงเรียนแก่นนครฯ</p>
+                        <div class="pt-4 border-t border-slate-200/60 flex justify-between items-center text-xs">
+                            <span class="text-slate-400">ชั้นมัธยมศึกษาปีที่ 2</span>
+                            <button class="text-brand-accent hover:text-brand-deep font-title font-bold flex items-center" onclick="showInteractiveModal('ชุดการเรียนรู้แผนที่เมืองเก่าขอนแก่น', 'ชุดพัฒนาทักษะทางภูมิศาสตร์และประวัติศาสตร์ท้องถิ่น โดยให้นักเรียนใช้สมาร์ตโฟนสแกนคิวอาร์โค้ดพิกัดสถานที่สำคัญทางวัฒนธรรมในชุมชนขอนแก่น พร้อมโมเดลจำลองที่เชื่อมต่อความรู้กับเหตุการณ์จริงในหน้าประวัติศาสตร์ท้องถิ่น เป็นการยกระดับความรักในภูมิลำเนาเกิด')">
+                                อ่านข้อมูลเพิ่มเติม <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 5 -->
+                <div class="portfolio-item bg-slate-50 rounded-2xl border border-brand-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="academic">
+                    <div class="h-48 bg-gradient-to-tr from-brand-deep to-brand-navy flex items-center justify-center p-6 text-white text-center relative">
+                        <i class="fa-solid fa-circle-question text-5xl opacity-20 absolute right-4 bottom-4"></i>
+                        <h4 class="font-title font-bold text-lg relative z-10">นวัตกรรมเครื่องมือสอบวัดผล "Kahoot Quest"</h4>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <span class="inline-block bg-[#E76F51]/10 text-brand-accent px-3 py-1 rounded-full text-xs font-title font-semibold">งานวิชาการ/วิจัย</span>
+                        <h3 class="font-title font-bold text-lg text-slate-900 leading-snug">คลังข้อสอบออนไลน์วิชาสังคมศึกษา ม.ปลาย</h3>
+                        <p class="text-slate-500 text-sm">การรวบรวมประเมินข้อสอบมาตรฐานโอเน็ต (O-NET) ปรับปรุงให้เป็นแพลตฟอร์มแบบตอบโต้สะดวกรวดเร็ว ทำให้นักเรียนทบทวนตนเองนอกเวลาเรียนได้ทุกที่</p>
+                        <div class="pt-4 border-t border-slate-200/60 flex justify-between items-center text-xs">
+                            <span class="text-slate-400">นักเรียนระดับ ม.6 สอบเข้ามหาวิทยาลัย</span>
+                            <button class="text-brand-accent hover:text-brand-deep font-title font-bold flex items-center" onclick="showInteractiveModal('คลังข้อสอบออนไลน์ Kahoot Quest ม.6', 'การจัดตั้งฐานข้อมูลคลังข้อสอบที่ครอบคลุมเนื้อหาทั้ง 5 สาระ ได้แก่ ศาสนา หน้าที่พลเมือง เศรษฐศาสตร์ ประวัติศาสตร์ และภูมิศาสตร์ ออกแบบให้เป็นชุดท้าทายตนเอง ทำให้นักเรียนชั้น ม.6 สามารถเตรียมตัวสอบแข่งขันและเข้าเรียนต่อมหาวิทยาลัยขอนแก่นและสถาบันอื่นๆ ได้อย่างมั่นใจ')">
+                                อ่านข้อมูลเพิ่มเติม <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 6 -->
+                <div class="portfolio-item bg-slate-50 rounded-2xl border border-brand-navy/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-category="award">
+                    <div class="h-48 bg-gradient-to-tr from-brand-accent to-pink-700/80 flex items-center justify-center p-6 text-white text-center relative">
+                        <i class="fa-solid fa-certificate text-5xl opacity-20 absolute right-4 bottom-4"></i>
+                        <h4 class="font-title font-bold text-lg relative z-10">รางวัลครูดีในดวงใจ โรงเรียน KNW</h4>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <span class="inline-block bg-brand-accent/15 text-brand-accent px-3 py-1 rounded-full text-xs font-title font-semibold">เกียรติบัตร/รางวัล</span>
+                        <h3 class="font-title font-bold text-lg text-slate-900 leading-snug">รางวัลครูขวัญใจนักเรียนและบุคลากร</h3>
+                        <p class="text-slate-500 text-sm">รางวัลโหวตจากการเลือกสรรของนักเรียนและเครือข่ายครูผู้ปกครอง ประจำปีการศึกษาก่อนหน้า สะท้อนคุณลักษณะการเป็นผู้แนะนำที่น่าไว้วางใจ</p>
+                        <div class="pt-4 border-t border-slate-200/60 flex justify-between items-center text-xs">
+                            <span class="text-slate-400">ประเมินโดย สภานักเรียน KNW</span>
+                            <button class="text-brand-accent hover:text-brand-deep font-title font-bold flex items-center" onclick="showInteractiveModal('รางวัลครูดีในดวงใจ โรงเรียนแก่นนครวิทยาลัย', 'รางวัลเกียรติยศที่ประเมินจากความผูกพัน ความเสียสละในการสนับสนุนการแนะแนวทางชีวิต ตลอดจนการปฏิบัติหน้าที่เป็นที่พึ่งพาแก่นักเรียนทั้งนอกและในเวลาเรียน เป็นความภูมิใจและกำลังใจสำคัญในการมุ่งมั่นทำงานเพื่อเด็กๆ')">
+                                อ่านข้อมูลเพิ่มเติม <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-brand-navy/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-navy font-title font-semibold tracking-wide uppercase text-sm">ภาพบันทึกเหตุการณ์</span>
+                <h2 class="font-title font-extrabold text-3xl sm:text-4xl text-slate-900">กิจกรรมการเรียนการสอนและบริการสังคม</h2>
+                <p class="text-slate-500">รวมภาพบรรยากาศที่เปี่ยมล้นไปด้วยรอยยิ้ม ความตั้งใจ และมิตรภาพที่เกิดขึ้นจริงในรั้วแก่นนครวิทยาลัย</p>
+            </div>
+
+            <!-- Gallery Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Gallery Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-deep shadow-md cursor-pointer aspect-[4/3]" onclick="openGalleryModal('การจัดสัมมนาประเด็นปัญหาสังคมในศตวรรษที่ 21 ของนักเรียน ม.ปลาย', 'ภาพบรรยากาศห้องเรียนระดับชั้นมัธยมศึกษาตอนปลายที่มีการจัดแบ่งกลุ่มผู้เรียนเป็นตัวแทนแสดงทัศนะเชิงกฎหมายและเศรษฐศาสตร์ นักเรียนมีความสนุกและกล้าแสดงความคิดเห็นสร้างสรรค์')">
+                    <!-- Elegant Abstract SVG replacing mock pictures -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-navy to-brand-deep flex items-center justify-center p-8 text-center text-white">
+                        <div class="space-y-2 transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                            <i class="fa-solid fa-people-group text-4xl text-brand-gold"></i>
+                            <h4 class="font-title font-bold text-base">การสัมมนาประเด็นปัญหาสังคม</h4>
+                            <p class="text-xs text-brand-goldlight/80">กิจกรรมส่งเสริมสิทธิเสรีภาพความเสมอภาค</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
+                        <span class="bg-brand-accent text-white font-title font-bold text-xs py-2 px-4 rounded-full shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> ขยายรูปภาพ
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-deep shadow-md cursor-pointer aspect-[4/3]" onclick="openGalleryModal('วันอาสาฬหบูชา กิจกรรมอบรมคุณธรรมจริยธรรมแก่นักเรียนแก่นนครฯ', 'งานนำพานักเรียนเข้าปฏิบัติธรรมและจัดนิทรรศการความรู้สากลของพระพุทธศาสนา เพื่อสืบสานประเพณีอันดีงามและขัดเกลาจิตวิญญาณให้อ่อนโยนช่วยเหลือเกื้อกูล')">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-accent to-brand-gold flex items-center justify-center p-8 text-center text-white">
+                        <div class="space-y-2 transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                            <i class="fa-solid fa-vihara text-4xl text-white"></i>
+                            <h4 class="font-title font-bold text-base">กิจกรรมเผยแผ่คุณธรรมจริยธรรม</h4>
+                            <p class="text-xs text-brand-goldlight/80">สืบสานศาสนพิธีในวันสำคัญทางศาสนา</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
+                        <span class="bg-brand-accent text-white font-title font-bold text-xs py-2 px-4 rounded-full shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> ขยายรูปภาพ
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-deep shadow-md cursor-pointer aspect-[4/3]" onclick="openGalleryModal('การจัดเวทีแนะแนวนอกสถานที่ KNW Open House', 'ร่วมนำเสนอบูธนวัตกรรมของกลุ่มสาระสังคมศึกษา ให้แก่คุณครูต่างสถาบันและผู้ปกครองที่เข้ามาร่วมชมผลงานเด่นประดับสถาบันแก่นนครวิทยาลัย')">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-gold to-brand-navy flex items-center justify-center p-8 text-center text-white">
+                        <div class="space-y-2 transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass-chart text-4xl text-white"></i>
+                            <h4 class="font-title font-bold text-base">จัดแสดงผลงาน KNW Open House</h4>
+                            <p class="text-xs text-brand-goldlight/80">นำเสนอบูธเปิดรับการเข้าคัดเลือกเรียนต่อ</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
+                        <span class="bg-brand-accent text-white font-title font-bold text-xs py-2 px-4 rounded-full shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> ขยายรูปภาพ
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 4 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-deep shadow-md cursor-pointer aspect-[4/3]" onclick="openGalleryModal('การแข่งขันตอบปัญหากฎหมายรัฐธรรมนูญในระดับภูมิภาค', 'การดูแลฝึกฝนนักเรียนตัวแทนสถาบันแก่นนครวิทยาลัย คว้าผลการจัดแข่งขันรางวัลชมเชยระดับภูมิภาคอีสานตอนบน สร้างชื่อเสียงแก่ตนเองและสถาบัน')">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#CD5C5C] to-brand-accent flex items-center justify-center p-8 text-center text-white">
+                        <div class="space-y-2 transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                            <i class="fa-solid fa-gavel text-4xl text-white"></i>
+                            <h4 class="font-title font-bold text-base">การแข่งขันทักษะตอบปัญหากฎหมาย</h4>
+                            <p class="text-xs text-brand-goldlight/80">เตรียมทีมเยาวชนคนดีศรีแก่นนคร</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
+                        <span class="bg-brand-accent text-white font-title font-bold text-xs py-2 px-4 rounded-full shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> ขยายรูปภาพ
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 5 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-deep shadow-md cursor-pointer aspect-[4/3]" onclick="openGalleryModal('กิจกรรมจิตอาสาพาทำความสะอาดโบราณสถานที่อยู่นอกพื้นที่', 'การส่งเสริมความรับผิดชอบและร่วมระดมพลังทำความสะอาดคราบขยะบริเวณรอบพื้นที่โบราณสถาน บ่มเพาะทักษะรักและใส่ใจต่อสิ่งแวดล้อมนอกห้องเรียน')">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#4B706E] to-[#6B8E8C] flex items-center justify-center p-8 text-center text-white">
+                        <div class="space-y-2 transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                            <i class="fa-solid fa-hands-holding-child text-4xl text-white"></i>
+                            <h4 class="font-title font-bold text-base">จิตอาสาบำรุงรักษาแหล่งเรียนรู้โบราณคดี</h4>
+                            <p class="text-xs text-brand-goldlight/80">การพาผู้เรียนออกไปมีสัมผัสหัวใจช่วยเหลือพลเมือง</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
+                        <span class="bg-brand-accent text-white font-title font-bold text-xs py-2 px-4 rounded-full shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> ขยายรูปภาพ
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 6 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-brand-deep shadow-md cursor-pointer aspect-[4/3]" onclick="openGalleryModal('การจัดตั้งกลุ่มวงสนทนาแลกเปลี่ยนนวัตกรรมชุมชน PLC ครูสังคม', 'การร่วมสร้างสรรค์และสะท้อนเทคนิคการควบคุมดูแลห้องเรียนอย่างมีคุณภาพ กับกลุ่มเพื่อนร่วมวิชาชีพผู้สอนกลุ่มสังคมศึกษาของแก่นนครวิทยาลัย')">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#6B5A72] to-brand-deep flex items-center justify-center p-8 text-center text-white">
+                        <div class="space-y-2 transform translate-y-2 group-hover:translate-y-0 transition duration-300">
+                            <i class="fa-solid fa-arrows-to-eye text-4xl text-white"></i>
+                            <h4 class="font-title font-bold text-base">การขับเคลื่อน PLC นวัตกรรมผู้สอน</h4>
+                            <p class="text-xs text-brand-goldlight/80">การประชุมวิชาชีพกลุ่มครูสร้างสรรค์</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
+                        <span class="bg-brand-accent text-white font-title font-bold text-xs py-2 px-4 rounded-full shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> ขยายรูปภาพ
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact info (5 cols) -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-brand-accent font-title font-semibold tracking-wide uppercase text-sm">ยินดีพูดคุยแลกเปลี่ยน</span>
+                        <h2 class="font-title font-extrabold text-3xl text-slate-900">ช่องทางการติดต่อคุณครูแนน</h2>
+                        <p class="text-slate-500 text-sm sm:text-base">หากคุณครูจากโรงเรียนอื่นๆ ผู้ปกครอง หรือนักเรียนคนใดต้องการแลกเปลี่ยนสื่อการเรียนรู้ นวัตกรรมกลุ่มสาระ หรือประสานงานกิจกรรม สามารถติดต่อโดยตรงได้ผ่านช่องทางนี้ครับ</p>
+                    </div>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-brand-goldlight text-brand-navy flex items-center justify-center mr-4 shadow-sm border border-brand-navy/10">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-title font-semibold text-sm text-slate-800">ที่ทำงานส่วนบุคคล</h4>
+                                <p class="text-sm text-slate-500 leading-relaxed">กลุ่มสาระการเรียนรู้สังคมศึกษาฯ ตึก 3 ชั้น 2 โรงเรียนแก่นนครวิทยาลัย ถ.เหล่านาดี ต.ในเมือง อ.เมือง จ.ขอนแก่น 40000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-brand-goldlight text-brand-navy flex items-center justify-center mr-4 shadow-sm border border-brand-navy/10">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-title font-semibold text-sm text-slate-800">อีเมลทางราชการ / ติดต่องาน</h4>
+                                <p class="text-sm text-slate-500 font-mono">manaswee.laoket@knw.ac.th</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-brand-goldlight text-brand-navy flex items-center justify-center mr-4 shadow-sm border border-brand-navy/10">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-title font-semibold text-sm text-slate-800">โทรสารโรงเรียนแก่นนครวิทยาลัย</h4>
+                                <p class="text-sm text-slate-500 font-mono">043-222-222 (โปรดระบุขอต่อกลุ่มสาระสังคมศึกษาฯ)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- School Badges / Decorative Map -->
+                    <div class="p-6 bg-brand-goldlight/30 rounded-2xl border border-brand-gold/10 flex items-center space-x-4">
+                        <div class="text-3xl text-brand-navy">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-title font-bold text-sm text-slate-800">โรงเรียนแก่นนครวิทยาลัย (KNW)</h4>
+                            <p class="text-xs text-slate-400">ขอนแก่น - สังกัดสำนักงานเขตพื้นที่การศึกษามัธยมศึกษาขอนแก่น</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (7 cols) -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" class="bg-brand-goldlight/20 border border-brand-navy/10 p-8 rounded-3xl shadow-lg space-y-6" onsubmit="handleFormSubmit(event)">
+                        <h3 class="font-title font-bold text-xl text-brand-deep pb-3 border-b border-brand-navy/10">ฝากข้อความถึงคุณครู</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="sender-name" class="block text-xs font-title font-bold text-slate-600 mb-2 uppercase tracking-wide">ชื่อ-นามสกุลของคุณ</label>
+                                <input type="text" id="sender-name" name="name" placeholder="นาย/นาง/นางสาว..." required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-navy/50 focus:border-brand-navy text-sm transition-all">
+                            </div>
+                            <div>
+                                <label for="sender-email" class="block text-xs font-title font-bold text-slate-600 mb-2 uppercase tracking-wide">ที่อยู่อีเมลตอบกลับ</label>
+                                <input type="email" id="sender-email" name="email" placeholder="example@email.com" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-navy/50 focus:border-brand-navy text-sm transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message-subject" class="block text-xs font-title font-bold text-slate-600 mb-2 uppercase tracking-wide">หัวข้อเรื่องที่ติดต่อ</label>
+                            <input type="text" id="message-subject" name="subject" placeholder="ต้องการแลกเปลี่ยนสื่อ, เสนอแนะหัวข้อสอน..." required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-navy/50 focus:border-brand-navy text-sm transition-all">
+                        </div>
+
+                        <div>
+                            <label for="message-body" class="block text-xs font-title font-bold text-slate-600 mb-2 uppercase tracking-wide">รายละเอียดเนื้อหาข้อความ</label>
+                            <textarea id="message-body" name="message" rows="4" placeholder="ระบุความประสงค์ของคุณที่นี่..." required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-navy/50 focus:border-brand-navy text-sm transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-brand-navy hover:bg-brand-deep text-white font-title font-bold rounded-xl transition duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-center flex items-center justify-center">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> ส่งข้อความส่วนตัวถึงครูแนน
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-deep text-white py-12 border-t border-brand-navy/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                
+                <!-- Col 1 -->
+                <div class="text-center md:text-left space-y-2">
+                    <span class="font-title font-bold text-lg text-brand-gold">มนัสวี เหลาเกตุ (ครูแนน)</span>
+                    <p class="text-xs text-slate-300">พัฒนาการศึกษาและสร้างสรรค์นวัตกรรมการสอนเพื่อพลเมืองโลก</p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="text-center space-y-2">
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://web.facebook.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-navy text-slate-300 hover:text-white flex items-center justify-center transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://line.me" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-navy text-slate-300 hover:text-white flex items-center justify-center transition-all"><i class="fa-brands fa-line"></i></a>
+                        <a href="https://github.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-navy text-slate-300 hover:text-white flex items-center justify-center transition-all"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <p class="text-xs text-slate-400">ติดตามข่าวสารครูได้ทางช่องทางสังคมออนไลน์</p>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="text-center md:text-right text-xs text-slate-300 space-y-1">
+                    <p>&copy; 2026 ครูมนัสวี เหลาเกตุ. สงวนลิขสิทธิ์ทั้งหมด</p>
+                    <p>พัฒนาขึ้นด้วยหัวใจสำหรับครูสังคมศึกษาไทย</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE DETAIL MODAL (PORTFOLIO INFO) -->
+    <div id="info-modal" class="fixed inset-0 bg-slate-900/65 backdrop-blur-sm hidden items-center justify-center z-50 p-4 transition-all opacity-0">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 transform scale-95 transition-transform duration-300" id="modal-content">
+            <div class="p-6 bg-brand-deep text-white flex justify-between items-center border-b border-brand-navy/10">
+                <h4 class="font-title font-bold text-lg text-brand-gold" id="modal-title">หัวข้อรายละเอียด</h4>
+                <button onclick="closeInteractiveModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-8 space-y-4">
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed" id="modal-body">เนื้อหาของรายละเอียดจะปรากฏที่นี่</p>
+                <div class="pt-4 flex justify-end">
+                    <button onclick="closeInteractiveModal()" class="px-5 py-2.5 bg-brand-navy hover:bg-brand-deep text-white font-title font-bold rounded-xl text-sm transition-all shadow-sm">ปิดรับทราบข้อมูล</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALLERY LIGHTBOX MODAL -->
+    <div id="gallery-modal" class="fixed inset-0 bg-slate-900/90 backdrop-blur-md hidden items-center justify-center z-50 p-4 transition-all opacity-0">
+        <div class="max-w-xl w-full space-y-4" id="gallery-modal-content">
+            <!-- Simulated Image Space -->
+            <div class="bg-gradient-to-tr from-brand-navy to-brand-deep aspect-[4/3] rounded-2xl flex items-center justify-center text-white border border-brand-navy/10 p-8 shadow-2xl relative">
+                <button onclick="closeGalleryModal()" class="absolute -top-12 right-0 text-white hover:text-brand-gold flex items-center space-x-1 font-title font-medium text-sm">
+                    <i class="fa-solid fa-xmark text-lg"></i> <span>ปิดรูปขยาย</span>
+                </button>
+                <div class="text-center space-y-4">
+                    <i class="fa-solid fa-image text-5xl text-white opacity-80"></i>
+                    <p class="text-xs text-brand-goldlight font-mono tracking-widest uppercase">ภาพกิจกรรมการสอน แฟ้มสะสมผลงานครูมนัสวี</p>
+                </div>
+            </div>
+            
+            <!-- Context Info -->
+            <div class="bg-white/10 p-6 rounded-2xl text-white backdrop-blur border border-white/5 space-y-2">
+                <h4 class="font-title font-bold text-lg text-brand-gold" id="gallery-title">คำอธิบายภาพ</h4>
+                <p class="text-slate-300 text-sm leading-relaxed" id="gallery-desc">คำอธิบายภาพบรรยากาศการเรียนของครูแนน</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCCESS ALERT BANNER -->
+    <div id="success-banner" class="fixed bottom-6 right-6 bg-brand-deep text-white border border-brand-navy/30 rounded-2xl p-5 shadow-2xl hidden z-50 transform translate-y-10 transition-all duration-300 max-w-sm">
+        <div class="flex items-start space-x-3">
+            <span class="text-brand-navy text-xl"><i class="fa-solid fa-circle-check"></i></span>
+            <div class="space-y-1">
+                <h4 class="font-title font-bold text-sm text-brand-gold" id="banner-title">ระบบจัดเก็บสำเร็จ</h4>
+                <p class="text-xs text-slate-300" id="banner-desc">ขอบคุณสำหรับการติดต่อกลับมาหาครูแนน ครับ!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR DYNAMIC INTERACTIONS -->
+    <script>
+        // Header styling change on scroll
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-[#FCFAF2]/95', 'shadow-md', 'border-brand-navy/20');
+                header.classList.remove('bg-[#FCFAF2]/90');
+            } else {
+                header.classList.add('bg-[#FCFAF2]/90');
+                header.classList.remove('bg-[#FCFAF2]/95', 'shadow-md', 'border-brand-navy/20');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-xl';
+            }
+        });
+
+        // Portfolio Category Filter Logic
+        const filterBtns = document.querySelectorAll('#portfolio-filters button');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Change Active Class on Button
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-navy', 'text-white', 'active');
+                    b.classList.add('bg-slate-100', 'text-slate-700');
+                });
+                btn.classList.add('bg-brand-navy', 'text-white', 'active');
+                btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+                // Filter Items
+                const filterValue = btn.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Interactive Information Modal Controls
+        function showInteractiveModal(title, body) {
+            const modal = document.getElementById('info-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').textContent = body;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeInteractiveModal() {
+            const modal = document.getElementById('info-modal');
+            const modalContent = document.getElementById('modal-content');
+
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Gallery Lightbox Modal Controls
+        function openGalleryModal(title, description) {
+            const modal = document.getElementById('gallery-modal');
+            const modalContent = document.getElementById('gallery-modal-content');
+
+            document.getElementById('gallery-title').textContent = title;
+            document.getElementById('gallery-desc').textContent = description;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeGalleryModal() {
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.add('opacity-0');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Custom Contact Form Submission Feedback (No alerts)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const senderName = document.getElementById('sender-name').value;
+            const senderEmail = document.getElementById('sender-email').value;
+
+            // Trigger Success Banner custom alert UI
+            const banner = document.getElementById('success-banner');
+            document.getElementById('banner-title').textContent = "ได้รับข้อความแล้ว!";
+            document.getElementById('banner-desc').textContent = `ขอบคุณคุณ ${senderName} ครูแนน มนัสวี จะติดต่อกลับที่ ${senderEmail} นะคะ`;
+            
+            banner.classList.remove('hidden');
+            setTimeout(() => {
+                banner.classList.remove('translate-y-10');
+            }, 10);
+
+            // Auto Close after 6 seconds
+            setTimeout(() => {
+                banner.classList.add('translate-y-10');
+                setTimeout(() => {
+                    banner.classList.add('hidden');
+                }, 300);
+            }, 6000);
+
+            // Reset Form Fields
+            document.getElementById('contact-form').reset();
+        }
+
+        // Smooth active navigation based on scrolling position
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 120)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('text-brand-accent', 'font-semibold');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('text-brand-accent', 'font-semibold');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
